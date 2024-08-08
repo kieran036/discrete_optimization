@@ -1,0 +1,20 @@
+- Greedy Algorithms: are very efficient but do not find the optimal soln. They require you to be greedy on one aspect
+to solve the problem.
+
+- Recursive Algorithms: e.g. Bellman equations are very inefficient as they take exponential time with more variables
+and depending on relationships they require computing the same iteration multiple times for different recursions
+
+- Dynamic Programming: for integer weights finds the optimal soln while the problem has few variables, beyond this it is inefficient. This
+algorithm optimises recursive problems by storing the values and referencing them than recalculating
+
+- Branch and Bound i) relax constraints ii) relax integer requirements. The strong relaxations of constraints can either
+make the tree more or less complex, where DFS and BFS can playoff each other.
+
+1. Depth-First Search: goes deep from the left and prunes as soon as we find a new node which is worse than the found
+soln. This is memory efficient. Useful for more variables and smaller capacity as the tree spans less.
+2. Best-First Search: goes for the best and prunes when all the nodes are worse than the found soln. This is sometimes
+memory inefficient as it depends on how many optimistic nodes there are.
+3. Least-Discrepancy Search: assumes a good heuristic is available such as a greedy approach and then gradually explore
+the search space in increasing order of mistakes, trusting the heuristic less and less and prunes when all the nodes
+are worse than the found soln. This has a tradeoff between time and space. More efficient implementations will take
+more space but can reduce the space by doing additional work.
